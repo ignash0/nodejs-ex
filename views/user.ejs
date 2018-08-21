@@ -3,9 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>student journal on-line</title>
-        <link rel="import" href="./customeEements/page-header/page-header.html">
-        <link rel="stylesheet"  href="./style/base.css">
-        <link rel="stylesheet"  href="./style/user.css">
+        <link rel="import" href="/public/customeEements/page-header/page-header.html">
+        <link rel="stylesheet"  href="/public/style/base.css">
+        <link rel="stylesheet"  href="/public/style/user.css">
     </head>
     <body>
         <page-header>
@@ -15,22 +15,27 @@
         <main class="user">
             <header>
                 <div id="information">
-                    <h1  id="fullName"></h1>
+                    <h1><%= name %></h1>
+                    <ul>
+                        <% info.forEach( item => { %>
+                        <li><%= item %></li>
+                        <% }); %>
+                    </ul>
                 </div>
-                <img src="./image/boy.png" alt="image_user">
+                <img src="/public/image/boy.png" alt="image_user">
             </header>
             <ul id="options">
                 <li id="groupsCase">
                     <h1>Группы:</h1>
                     <ul id="groups"></ul>
-                    <a href="./add-groupe.html" id="newGroup">
+                    <a href="/add-group" id="newGroup">
                         <p>Добавить группу</p>
                     </a>
                 </li>
                 <li id="teachersCase">
                     <h1>Преподаватели:</h1>
                     <ul id="teachers"></ul>
-                    <a href="./add-teacher.html"  id="newTeacher">
+                    <a href="/add-teacher"  id="newTeacher">
                         <p>Добавить учителя</p>
                     </a>
                 </li>
@@ -40,8 +45,7 @@
                 </li>
             </ul>
         </main>
-        <script type="module" src="./script/user.js"></script>
-
+        
     </body>
     <footer>
 

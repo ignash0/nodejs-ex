@@ -14,7 +14,7 @@
                 background-size:100% 100%;
                 color:rgb(249, 250, 243);
             }
-            body header {
+            /* body header {
                 position: relative;
                 height: 5%;
                 border: 0.4em solid transparent;
@@ -57,7 +57,7 @@
             body > header menu ul li {
                 padding: 0 1em;
                 font-size: 80%
-            }
+            } */
 
             h1, body, ul, blockquote, menu, figure{
                 margin: 0;
@@ -84,6 +84,8 @@
                 font-size: 1.5em;
             }
             cite{
+                position: relative;
+                top: 0.5em;
                 display: block;
                 text-align:right;
                 text-decoration-style: none;
@@ -214,6 +216,19 @@
             }
             #checkin{
                 width: 3em;
+            }
+            blockquote{
+                background: rgba(144, 144, 144, 0.6);
+                padding: 1em;
+                border-radius: 1em;
+            }
+            blockquote::after{
+                content: '';
+                position: absolute;
+                border: 13px solid transparent;
+                border-top: 17px solid rgba(144, 144, 144, 0.6);
+                bottom: 0.15em;
+                right: 5em;
             }
 
 
