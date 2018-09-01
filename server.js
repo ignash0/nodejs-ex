@@ -82,6 +82,5 @@ app.post('/teacher', (req, res) => {
 })
 
 
-app.listen(port);
 app.listen(port, ip);
 console.log('Server running on ', ip, port)
